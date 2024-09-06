@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 220vh;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  /* background-color: #c8a1e0b7; */
+  background-color: #f8f6f1;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.2vw;
+  /* background-color: #8243ba; */
+  background-color: #dfd1c3;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo-img {
+  width: 6vw;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+}
+
+.main-content {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px; /* Adjust for the fixed header */
+}
+
+.sub-title {
+  font-size: 3.3rem;
+  color: #111111;
+  margin-top: 12vw;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #414141;
+  margin: 0vw 10vw;
+  padding: 1vw 10vw;
+  margin-bottom: 20vw;
+  margin-top: 10px;
+}
+
+/* Container holding all the feature boxes */
+.features-container {
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 25px;
+  gap: 10px; 
+  margin-bottom: 6vw ;
+}
+
+/* Rows of feature boxes */
+.features-row {
+  display: flex;
+  justify-content: center; 
+  gap: 10px;
+  width: 100%; 
+}
+
+/* Individual feature box styling */
+.feature-box {
+  background-color: #F7EFE5;
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
+  margin: 1vw 2vw;
+  padding: 3vw;
+  max-width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title of each feature */
+.feature-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Description of each feature */
+.feature-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Centered box styling */
+.centered-box {
+  display: flex;
+  justify-content: center; 
+  width: 100%; 
+}
+
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #1c0d37dd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5vw;
+}
+
+.start-button:hover {
+  background-color: #dfd1c3;
+}
