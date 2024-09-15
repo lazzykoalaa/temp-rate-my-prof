@@ -33,12 +33,12 @@
   }
   
   .message-text {
-    font-size: 14px;
+    font-size: 1.5rem;
     margin-bottom: 5px;
   }
   
   .message-file {
-    font-size: 12px;
+    font-size: 1.5rem;
     color: #4c4c4c;
     background-color: #f8f6f1;
     padding: 5px;
@@ -62,7 +62,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     outline: none;
-    font-size: 14px;
+    font-size: 1.5rem;
 
   }
   
