@@ -12,7 +12,7 @@ function App() {
   ];
 
   return (
-    <div className="App">
+    <div className="App">    
       <div className="main">
           <div className="home-page">
             
@@ -59,7 +59,7 @@ function App() {
       </div>
     </div>
 
-        <button className="start-button">Get Started</button>
+        {/* <button className="start-button">Get Started</button> */}
       </main>
     
     </div>

@@ -5,12 +5,11 @@
 }
 
 .main {
-  height: 220vh;
+  height: 250vh;
 }
 
 body {
   font-family: 'Arial', sans-serif;
-  /* background-color: #c8a1e0b7; */
   background-color: #f8f6f1;
 }
 
@@ -26,7 +25,6 @@ body {
   align-items: center;
   width: 100%;
   padding: 0.2vw;
-  /* background-color: #8243ba; */
   background-color: #dfd1c3;
   border-bottom: 1px solid #e0e0e0;
   position: fixed;
@@ -43,7 +41,7 @@ body {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #333;
 }
 
@@ -54,13 +52,13 @@ body {
 }
 
 .sub-title {
-  font-size: 3.3rem;
+  font-size: 4.5rem;
   color: #111111;
   margin-top: 12vw;
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #414141;
   margin: 0vw 10vw;
   padding: 1vw 10vw;
@@ -94,7 +92,7 @@ body {
   border-radius: 8px;
   margin: 1vw 2vw;
   padding: 3vw;
-  max-width: 450px;
+  max-width: 550px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -108,14 +106,14 @@ body {
 
 /* Title of each feature */
 .feature-title {
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 10px;
 }
 
 /* Description of each feature */
 .feature-description {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #555;
 }
 
