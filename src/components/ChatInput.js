@@ -7,12 +7,38 @@ const ChatInput = () => {
   const [file, setFile] = useState(null);
   const [chat, setChat] = useState([]);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (message || file) {
-      const newMessage = { text: message, file };
-      setChat([...chat, newMessage]);
-      setMessage('');
-      setFile(null);
+      // Create a FormData object to send text and file together
+      const formData = new FormData();
+      formData.append('text', message);
+      if (file) {
+        formData.append('file', file);
+      }
+  
+      try {
+        const response = await fetch('http://localhost:8000/generate', {
+          method: 'POST',
+          body: JSON.stringify({ user_input: message }), // Adjust based on your API
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+  
+        const data = await response.text(); 
+  
+        if (response.ok) {
+          const newMessage = { text: message, file: file ? file.name : null, isUser: true };
+          const aiResponse = { text: data, file: null, isUser: false };
+          setChat([...chat, newMessage, aiResponse]);
+          setMessage('');
+          setFile(null);
+        } else {
+          console.error('Error:', data);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     }
   };
 
@@ -24,9 +50,12 @@ const ChatInput = () => {
     <div className="chat-container">
       <div className="chat-box">
         {chat.map((msg, index) => (
-          <div key={index} className="chat-message">
+          <div 
+            key={index} 
+            className={`chat-message ${msg.isUser ? 'user-message' : 'ai-message'}`}
+          >
             <div className="message-text">{msg.text}</div>
-            {msg.file && <div className="message-file">{msg.file.name}</div>}
+            {msg.file && <div className="message-file">{msg.file}</div>}
           </div>
         ))}
       </div>

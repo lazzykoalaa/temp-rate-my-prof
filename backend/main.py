@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from fastapi.responses import PlainTextResponse
+from fastapi.middleware.cors import CORSMiddleware
 import google.generativeai as genai
 from config import GEMINI_API_KEY
 import logging
@@ -19,6 +20,14 @@ if GEMINI_API_KEY is None:
 
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 generation_config = {
     "temperature": 1,
@@ -59,7 +68,7 @@ class Query(BaseModel):
 async def generate_response(query: Query):
     try:
         prompt = (
-            f"You are the LazzyKoalaa Rate My Professor. Your primary role is to help users find professors from the information you have.Use the provided context to identify professors that meet the user's criteria. If you don't find any relevant professors, respond with NO PROFESSOR.Make sure to communicate in a friendly and approachable tone. Avoid overly formal or technical language, and strive to be clear and concise in your responses.Important: If no professors are found or not enough information is found, always end your response with NO PROFESSOR found. \n\n"
+            f"You are the LazzyAI bot. Your primary role is to help users find professors from the information you have.Use the provided context to identify professors that meet the user's criteria. If you don't find any relevant professors, respond with NO PROFESSOR.Make sure to communicate in a formal and approachable tone. Avoid overly formal or technical language, and strive to be clear and concise in your responses. \n\n"
             f"Data: {data}\nUser query: {query.user_input}"
         )
         

@@ -1,4 +1,4 @@
-.chat-container {
+/* .chat-container {
     display: flex;
     flex-direction: column;
     height: 600px;
@@ -35,6 +35,7 @@
   .message-text {
     font-size: 1.5rem;
     margin-bottom: 5px;
+ 
   }
   
   .message-file {
@@ -64,6 +65,112 @@
     outline: none;
     font-size: 1.5rem;
 
+  }
+  
+  .file-input-label {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .send-button {
+    margin-left: 10px;
+    background-color: #1c0d37dd;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .send-button:hover {
+    background-color: #6e6963;
+  }
+
+  .user-message {
+    align-self: flex-end;
+  }
+   */
+
+
+
+   .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8vw;
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .chat-message {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+    margin-left: 11vw;
+    background-color: #d1e7ff; /* Light blue for user messages */
+  }
+  
+  .ai-message {
+    align-self: flex-start;
+    background-color: #f7efe5; /* Beige color for AI messages */
+  }
+  
+  .message-text {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .message-file {
+    font-size: 1.5rem;
+    color: #4c4c4c;
+    background-color: #f8f6f1;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .text-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1.5rem;
   }
   
   .file-input-label {
